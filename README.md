@@ -1,3 +1,4 @@
 # CursPython <br/>
 Cursul 0: Introducere în Python <br/>
-Cursul 1: Fișier Python / Variabile / Tipuri de date
+Cursul 1: Fișier Python / Variabile / Tipuri de date <br />
+Cursul 2: Operatori / Condiționalul if else
