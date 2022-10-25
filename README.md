@@ -8,4 +8,5 @@ Cursul 4: Cicluri repetitive <br />
 Cursul 5: Funcții <br />
 Cursul 6: Programarea orientata obiect <br />
 Cursul 7: Cei 4 piloni ai OOP <br />
+Cursul 8: Selectori id/ nume/ link / css <br />
 
