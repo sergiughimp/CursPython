@@ -24,12 +24,15 @@ class MyTestCase(unittest.TestCase):
     def tearDown(self) -> None:
         pass
 
+    # @unittest.skipIf(enviroment=="PRODUCTION", "Do not run on production")
     def test_nothing(self):
         assert 1 + 1 == 2
 
     def not_a_test(self):
         print("This is not a test!")
 
+    # Folosim decoratorul de skip ca sa "sarim" peste teste
+    @unittest.skip
     def test_something(self):
         assert len("Sergiu") == 6
 
