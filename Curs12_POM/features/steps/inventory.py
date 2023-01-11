@@ -25,3 +25,25 @@ def step_impl(context):
 def step_impl(context):
     expected_err_msg = "Epic sadface: You can only access '/inventory.html' when you are logged in."
     assert context.login_page.get_error_message() == expected_err_msg
+
+
+@Given("I am a logged in user")
+def step_impl(context):
+    context.login_page.get_page()
+    context.login_page.login("standard_user", "secret_sauce")
+
+@Given("I am on the Inventory Page")
+def step_impl(context):
+    context.inventory_page.get_page()
+
+@When("I add a product to cart")
+def step_impl(context):
+    context.inventory_page.add_product_to_cart()
+
+@Then("The 'Add to cart' button changes to 'remove' button")
+def step_impl(context):
+    assert context.inventory_page.remove_button_exists()
+
+@Then("The cart counter is incremented by one")
+def step_impl(context):
+    assert context.inventory_page.get_cart_badge_counter() == '1'
